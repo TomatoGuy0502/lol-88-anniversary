@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fffefc;
+}
+p {
+  margin: 0;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.manual {
+  width: 30%;
+  background-color: #f5f5f5;
+  padding: 24px;
+}
+.auto {
+  padding: 24px;
+}
+.manual__btn {
+  height: 200px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: #37352f;
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  font-family: 'Fredoka One', cursive;
+}
+.manual__btn:disabled {
+  background-color: #7b766a;
+  cursor: not-allowed;
+}
+.manual__code {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  height: 72px;
+  margin-bottom: 24px;
+}
+.manual__code__text {
+  line-height: 24px;
+}
+.copied {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  height: 24px;
+  width: 24px;
+  transition: 0.3s;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+footer {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

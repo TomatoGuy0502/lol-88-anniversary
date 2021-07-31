@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lol anniversary</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="./index.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="manual">
+        <h1 class="manual__title">抓取最新留言</h1>
+        <div class="manual__code">
+          <p class="manual__code__text">請點擊下方按鈕</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="copied"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#555"
+            style="opacity: 0"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+            />
+          </svg>
+        </div>
+        <button onClick="getCode()" class="manual__btn">Search & Copy</button>
+      </div>
+      <div class="auto">
+        <h1 class="manual__title">自動輸入邀請碼</h1>
+        <div class="info">
+          <p>此區塊施工中</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="red"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+            />
+          </svg>
+        </div>
+      </div>
+    </main>
+    <footer><small>Copyright &copy; 2021, 小彥. All Rights Reserved</small></footer>
+  </body>
+</html>

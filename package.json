@@ -1,0 +1,17 @@
+{
+  "name": "lol-88-anniversary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fastify": "^3.19.2",
+    "fastify-static": "^4.2.2"
+  }
+}
