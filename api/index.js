@@ -5,7 +5,7 @@ const agent = new https.Agent({
   rejectUnauthorized: false
 })
 
-const getComments = async ({ id = 'tw_32775_newnews_32159', start = 0, size = 10, order = 2 } = {}) => {
+const getComments = async ({ id = 'tw_32775_newnews_32165', start = 0, size = 10, order = 2 } = {}) => {
   if (size > 50) size = 50
   if (start < 0) start = 0
 
