@@ -16,7 +16,7 @@ async function routes (fastify, options) {
 
     try {
       // 可能最新的留言內沒有邀請碼，所以多抓一點留言，
-      const { data } = await getComments({ id: 'tw_32775_newnews_32165', order, size: size + 3, start })
+      const { data } = await getComments({ id: 'tw_32775_newnews_32194', order, size: size + 3, start })
       if (data.error) {
         throw data.error
       }
