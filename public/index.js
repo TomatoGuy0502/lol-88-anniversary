@@ -56,12 +56,17 @@ async function enterCode (userToken, code, csrfToken = '') {
 let isRunning = false
 async function autoEnterCode () {
   if (isRunning) return
+  const userToken = $input.value
+  if (!userToken.match(/[a-zA-Z0-9]{64}/)) {
+    console.error('Token錯誤，應為64位之英數字')
+    return
+  }
   isRunning = true
   $formBtn.disabled = true
 
   let finished = false
-  const userToken = $input.value
   $input.disabled = true
+
   console.log('喀咚...')
   await sleep(400)
   console.log('哐啷...')
