@@ -95,15 +95,10 @@ async function autoEnterCode () {
         finished = true
         break
       }
-      await sleep(400)
+      await sleep(1500)
     }
   }
   $input.disabled = false
   $formBtn.disabled = false
   isRunning = false
-}
-
-async function handleClick () {
-  const userToken = $input.value
-  await enterCode(userToken, code)
 }
