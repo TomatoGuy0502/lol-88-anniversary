@@ -94,6 +94,10 @@ main {
   padding: 0 20px;
   color: #fff;
 }
+.manual__form__btn:disabled {
+  background-color: #7b766a;
+  cursor: not-allowed;
+}
 .manual__log {
   margin: 0;
   padding: 16px;

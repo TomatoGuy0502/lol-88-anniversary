@@ -3,6 +3,7 @@ const $code = document.querySelector('.manual__code__text')
 const $svg = document.querySelector('.copied')
 const $input = document.querySelector('[name="userToken"]')
 const $log = document.querySelector('.manual__log')
+const $formBtn = document.querySelector('.manual__form__btn')
 
 ConsoleLogHTML.DEFAULTS.error = 'log-message--error'
 ConsoleLogHTML.DEFAULTS.log = 'log-message'
@@ -52,8 +53,12 @@ async function enterCode (userToken, code, csrfToken = '') {
     console.error(error)
   }
 }
-
+let isRunning = false
 async function autoEnterCode () {
+  if (isRunning) return
+  isRunning = true
+  $formBtn.disabled = true
+
   let finished = false
   const userToken = $input.value
   $input.disabled = true
@@ -89,6 +94,8 @@ async function autoEnterCode () {
     }
   }
   $input.disabled = false
+  $formBtn.disabled = false
+  isRunning = false
 }
 
 async function handleClick () {
