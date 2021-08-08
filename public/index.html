@@ -10,8 +10,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.rawgit.com/Alorel/console-log-html/master/console-log-html.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-    <script src="./index.js" defer></script>
+    <script src="./index.js" async defer></script>
   </head>
 
   <body>
@@ -37,35 +38,24 @@
           </svg>
         </div>
         <button onClick="getCode()" class="manual__btn">Search & Copy</button>
+        <footer><small>Copyright &copy; 2021, 小彥. All Rights Reserved</small></footer>
       </div>
       <div class="auto">
         <h1 class="manual__title">自動輸入邀請碼</h1>
-        <div class="info">
-          <p>此區塊施工中</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="red"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-            />
-          </svg>
+        <div class="manual__content">
+          <h2>執行步驟</h2>
+          <ol>
+            <li>找到LOL日誌資料夾（預設路徑：<b>C:\Garena\Games\32775\Game\Logs\LeagueClient Logs</b>）</li>
+            <li>用任意編輯器（ex:記事本）打開最新的<b>_LeagueClient.log</b></li>
+            <li>在檔案中尋找<b>https://bargain.lol.garena.tw/?token=</b>，取得Token後，填入下方輸入框</li>
+          </ol>
+          <div class="manual__form">
+            <input type="text" name="userToken" placeholder="請輸入Token">
+            <button onclick="autoEnterCode()">Start</button>
+          </div>
+          <ul class="manual__log"></ul>
         </div>
       </div>
     </main>
-    <footer><small>Copyright &copy; 2021, 小彥. All Rights Reserved</small></footer>
   </body>
 </html>

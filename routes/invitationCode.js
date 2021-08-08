@@ -16,7 +16,12 @@ async function routes (fastify, options) {
 
     try {
       // 可能最新的留言內沒有邀請碼，所以多抓一點留言，
-      const { data } = await getComments({ id: 'tw_32775_newnews_32194', order, size: size + 3, start })
+      const { data } = await getComments({
+        id: 'tw_32775_newnews_32194',
+        order,
+        size: size + 3,
+        start
+      })
       if (data.error) {
         throw data.error
       }
@@ -28,18 +33,26 @@ async function routes (fastify, options) {
 
       return { code }
     } catch (error) {
-      return { statusCode: 500, body: error.toString() }
+      throw { statusCode: 500, body: error.toString() }
     }
   })
 
   fastify.post('/enter-code', async (request, reply) => {
     try {
-      const { userToken, csrfToken, code } = request.body
-      const { data } = await enterCode({ userToken, csrfToken, code })
+      const { userToken, code } = request.body
+      const { headers } = await enterCode({ userToken, code })
+      const newCsfrToken = headers['set-cookie'][0].match(
+        /(?<=csrftoken=)[a-zA-Z0-9]*/gm
+      )[0]
+      const { data } = await enterCode({
+        userToken,
+        code,
+        csrfToken: newCsfrToken
+      })
 
-      return { data }
+      return { ...data }
     } catch (error) {
-      return { statusCode: 500, body: error.toString() }
+      throw { statusCode: 500, message: error }
     }
   })
 }

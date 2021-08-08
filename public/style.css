@@ -9,18 +9,26 @@ body {
 p {
   margin: 0;
 }
+h2, ol {
+  margin-top: 0;
+}
 main {
   display: flex;
   flex-direction: row;
   height: 100vh;
 }
 .manual {
+  position: relative;
   width: 30%;
+  min-width: 300px;
   background-color: #f5f5f5;
   padding: 24px;
 }
 .auto {
+  display: flex;
+  flex-direction: column;
   padding: 24px;
+  flex: 1;
 }
 .manual__btn {
   height: 200px;
@@ -48,6 +56,11 @@ main {
 .manual__code__text {
   line-height: 24px;
 }
+.manual__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 .copied {
   position: absolute;
   right: 24px;
@@ -60,12 +73,51 @@ main {
   display: flex;
   align-items: center;
 }
+.manual__form {
+  margin-bottom: 20px;
+  display: flex;
+}
+.manual__form input {
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 5px 0 0 5px;
+  height: 30px;
+  padding: 20px;
+  flex: 1;
+  max-width: 70%;
+  outline: none;
+}
+.manual__form button {
+  border: none;
+  background-color: #37352f;
+  border-radius: 0 5px 5px 0;
+  padding: 0 20px;
+  color: #fff;
+}
+.manual__log {
+  margin: 0;
+  padding: 16px;
+  width: 100%;
+  flex: 1;
+  border-radius: 5px;
+  list-style: none;
+  color: white;
+  background-color: #0e1e25;
+  line-break: anywhere;
+}
+.manual__log li {
+  padding: 2px;
+}
+.log-message--error {
+  background-color: rgba(255, 96, 96, 0.6);
+}
 footer {
   padding: 5px;
   width: 100%;
   text-align: center;
-  position: fixed;
+  position: absolute;
   bottom: 0;
+  left: 0;
 }
 .fadeIn {
   animation-name: fadeIn;
