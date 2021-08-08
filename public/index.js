@@ -64,7 +64,7 @@ async function autoEnterCode () {
   console.log('機器人啟動...')
 
   while (!finished) {
-    const { data } = await axios.get('/api/invitation-code?size=3')
+    const { data } = await axios.get('/api/invitation-code?size=50')
     const codes = data.code
     for (let i = 0; i < codes.length; i++) {
       const code = codes[i]
@@ -85,7 +85,7 @@ async function autoEnterCode () {
         finished = true
         break
       }
-      await sleep(200)
+      await sleep(400)
     }
   }
   $input.disabled = false
