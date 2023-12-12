@@ -1,6 +1,8 @@
 # 英雄聯盟8.8週年慶活動-氣球小工具
 
-[網頁連結](https://lol-anniversary.tomatoguy.me/ "網頁連結")
+[~~網頁連結~~](https://lol-anniversary.tomatoguy.me/ "網頁連結") (活動已結束，網域也已失效)
+
+[巴哈姆特文章](https://forum.gamer.com.tw/C.php?bsn=17532&snA=675040 "巴哈文章")
 
 
 ## 功能介紹
